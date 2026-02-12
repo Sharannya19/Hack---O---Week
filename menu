@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu</title>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(https://st2.depositphotos.com/3278219/7690/i/450/depositphotos_76902023-stock-photo-coffee-shop-blur-background.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            padding-top: 90px;
+        }
+
+        /* ---------- STICKY HEADER ---------- */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(178, 34, 34, 0.92);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        /* ---------- LEFT NAVIGATION ---------- */
+        .side-nav {
+            position: fixed;
+            left: 15px;
+            top: 120px;
+
+            background: rgba(255,255,255,0.9);
+            backdrop-filter: blur(6px);
+
+            padding: 15px;
+            border-radius: 14px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            z-index: 900;
+        }
+
+        .side-nav a {
+            text-decoration: none;
+            background: #b22222;
+            color: white;
+            padding: 8px 14px;
+            border-radius: 20px;
+            text-align: center;
+            font-weight: bold;
+
+            transition: 0.2s;
+        }
+
+        .side-nav a:hover {
+            background: #8b1a1a;
+        }
+
+        /* ---------- MENU CONTAINER ---------- */
+        .menu {
+            width: 900px;
+            margin: auto;
+
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(6px);
+
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        /* ---------- CARD SECTIONS ---------- */
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 35px;
+
+            box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+        }
+
+        .card-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            font-size: 26px;
+            color: #b22222;
+            margin-bottom: 12px;
+        }
+
+        .food-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin: 15px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .price {
+            text-align: right;
+            font-weight: bold;
+        }
+
+	/* ---------- THANK YOU PANEL ---------- */
+	.thank-you {
+    	margin-top: 40px;
+    	padding: 35px 25px;
+
+    	background: linear-gradient(
+        rgba(178,34,34,0.9),
+        rgba(120,20,20,0.9)
+   	);
+
+    	color: white;
+    	text-align: center;
+
+    	border-radius: 20px;
+    	box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+	}
+
+	.thank-you h2 {
+    	margin-bottom: 10px;
+    	font-size: 28px;
+	}
+
+	.thank-you .slogan {
+    	font-size: 20px;
+    	font-style: italic;
+   	margin: 10px 0;
+	}
+
+	.thank-you .note {
+   	font-size: 16px;
+    	opacity: 0.9;
+	}
+
+    </style>
+</head>
+
+<body>
+
+<!-- TOP HEADER -->
+<div class="header">
+    <h1>🌶️ Spice Garden Restaurant</h1>
+    <p>Fresh • Tasty • Affordable</p>
+</div>
+
+<!-- LEFT CATEGORY NAV -->
+<div class="side-nav">
+    <a href="#starters">🥟 Starters</a>
+    <a href="#main">🍛 Main</a>
+    <a href="#breads">🍞 Breads</a>
+    <a href="#desserts">🍰 Desserts</a>
+    <a href="#beverages">☕ Drinks</a>
+</div>
+
+<div class="menu">
+
+    <!-- STARTERS -->
+    <div class="card" id="starters">
+        <div class="card-title">🥟 Starters</div>
+
+        <img class="food-img"
+     src="https://cdn.pixabay.com/photo/2018/06/18/16/05/food-3482749_1280.jpg"
+     alt="Starters">
+
+        <table>
+            <tr><td>Vegetable Pakora</td><td class="price">₹120</td></tr>
+            <tr><td>Paneer Tikka</td><td class="price">₹180</td></tr>
+            <tr><td>Paneer 65</td><td class="price">₹170</td></tr>
+            <tr><td>Chicken 65</td><td class="price">₹220</td></tr>
+            <tr><td>Chicken Lollipop</td><td class="price">₹240</td></tr>
+            <tr><td>Gobi Manchurian</td><td class="price">₹150</td></tr>
+        </table>
+    </div>
+
+    <!-- MAIN COURSE -->
+    <div class="card" id="main">
+        <div class="card-title">🍛 Main Course</div>
+
+        <img class="food-img"
+             src="https://images.unsplash.com/photo-1599043513900-ed6fe01d3833?auto=format&fit=crop&w=1200&q=80"
+             alt="Biryani">
+
+        <table>
+            <tr><td>Veg Fried Rice</td><td class="price">₹150</td></tr>
+            <tr><td>Veg Biryani</td><td class="price">₹180</td></tr>
+            <tr><td>Paneer Butter Masala</td><td class="price">₹200</td></tr>
+            <tr><td>Paneer Kadhai</td><td class="price">₹210</td></tr>
+            <tr><td>Chicken Curry</td><td class="price">₹230</td></tr>
+            <tr><td>Chicken Biryani</td><td class="price">₹250</td></tr>
+            <tr><td>Mutton Biryani</td><td class="price">₹320</td></tr>
+        </table>
+    </div>
+
+    <!-- BREADS -->
+    <div class="card" id="breads">
+        <div class="card-title">🍞 Breads</div>
+
+        <img class="food-img"
+             src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=1200&q=80"
+             alt="Naan">
+
+        <table>
+            <tr><td>Plain Naan</td><td class="price">₹40</td></tr>
+            <tr><td>Butter Naan</td><td class="price">₹50</td></tr>
+            <tr><td>Garlic Naan</td><td class="price">₹60</td></tr>
+            <tr><td>Tandoori Roti</td><td class="price">₹25</td></tr>
+            <tr><td>Butter Roti</td><td class="price">₹30</td></tr>
+        </table>
+    </div>
+
+    <!-- DESSERTS -->
+    <div class="card" id="desserts">
+        <div class="card-title">🍰 Desserts</div>
+
+        <img class="food-img"
+             src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=1200&q=80"
+             alt="Dessert">
+
+        <table>
+            <tr><td>Gulab Jamun</td><td class="price">₹80</td></tr>
+            <tr><td>Mishti Dahi</td><td class="price">₹90</td></tr>
+	    <tr><td>Malpua Rabdi</td><td class="price">₹50</td></tr>
+            <tr><td>Ice Cream</td><td class="price">₹70</td></tr>
+            <tr><td>Brownie with Ice Cream</td><td class="price">₹140</td></tr>
+        </table>
+    </div>
+
+    <!-- BEVERAGES -->
+    <div class="card" id="beverages">
+        <div class="card-title">☕ Beverages</div>
+
+        <img class="food-img"
+             src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=80"
+             alt="Coffee">
+
+        <table>
+            <tr><td>Water Bottle (500ml)</td><td class="price">₹15</td></tr>
+            <tr><td>Water Bottle (1 ltr)</td><td class="price">₹25</td></tr>
+            <tr><td>Tea</td><td class="price">₹20</td></tr>
+            <tr><td>Coffee</td><td class="price">₹30</td></tr>
+            <tr><td>Fresh Lime Soda</td><td class="price">₹40</td></tr>
+            <tr><td>Soft Drinks</td><td class="price">₹35</td></tr>
+        </table>
+    </div>
+
+	<!-- THANK YOU PANEL -->
+	<div class="thank-you">
+    	<h2>✨ Thank You for Dining With Us ✨</h2>
+    	<p class="slogan">“Where Indian Heritage Meets Modern Luxury.”</p>
+    	<p class="note">
+        We look forward to welcoming you for an unforgettable culinary experience.
+    	</p>
+    </div>
+
+</div>
+
+</body>
+</html>
