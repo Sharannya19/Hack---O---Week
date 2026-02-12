@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Event Registration Form</title>
+ <style>
+ body
+ {
+  background-image: url(https://i.pinimg.com/736x/e8/f8/d2/e8f8d217206b67f2abe95ea862312722.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+ }
+</style>
+</head>
+
+<body>
+
+<form>
+<table align="center" width="700" cellpadding="10">
+
+<tr>
+ <td colspan="2" align="center">
+  <h1>College Fest Registration</h1>
+ </td>
+</tr>
+
+<tr>
+ <td>Roll No.:</td>
+ <td><input type="text" size="50"/></td>
+</tr>
+
+<tr>
+ <td>Student Name:</td>
+ <td>
+  <input type="text" size="21" placeholder="First Name"/> -
+  <input type="text" size="21" placeholder="Last Name"/>
+ </td>
+</tr>
+
+<tr>
+ <td>College Name:</td>
+ <td><input type="text" size="50"/></td>
+</tr>
+
+<tr>
+ <td>Date of Birth:</td>
+ <td>
+  <input type="text" size="3" placeholder="DD"/> -
+  <input type="text" size="3" placeholder="MM"/> -
+  <input type="text" size="8" placeholder="YYYY"/>
+  <i>(DD-MM-YYYY)</i>
+ </td>
+</tr>
+
+<tr>
+ <td>Mobile No.:</td>
+ <td>
+  <input type="text" size="1" value="+91"/> -
+  <input type="text" size="42"/>
+ </td>
+</tr>
+
+<tr>
+ <td>Email ID:</td>
+ <td><input type="text" size="50"/></td>
+</tr>
+
+<tr>
+ <td>Gender:</td>
+ <td>
+  <input type="radio" name="g"/> Male
+  <input type="radio" name="g"/> Female
+  <input type="radio" name="g"/> Other
+ </td>
+</tr>
+
+<tr>
+ <td>Department:</td>
+ <td> 
+  <input type="checkbox"/> Engineering
+  <input type="checkbox"/> Law
+  <input type="checkbox"/> Business Management
+  <input type="checkbox"/> Design
+  <input type="checkbox"/> Architecture
+ </td>
+</tr>
+
+<tr>
+ <td>Event Name:</td>
+ <td>
+  <select>
+   <option>------ Select Event ------</option>
+   <option>Dance Competition</option>
+   <option>Singing Competition</option>
+   <option>Hackathon</option>
+   <option>Drama</option>
+   <option>Quiz</option>
+   <option>Sports</option>
+  </select>
+ </td>
+</tr>
+
+<tr>
+ <td>Upload Student ID:</td>
+ <td><input type="file"/></td>
+</tr>
+
+<tr>
+ <td>City:</td>
+ <td><input type="text" size="50"/></td>
+</tr>
+
+<tr>
+ <td>Address:</td>
+ <td><textarea cols="48" rows="5"></textarea></td>
+</tr>
+
+<tr>
+ <td colspan="2" align="center">
+  <input type="submit" value="Register"/>
+  <input type="reset" value="Clear"/>
+ </td>
+</tr>
+
+</table>
+</form>
+
+</body>
+</html>
