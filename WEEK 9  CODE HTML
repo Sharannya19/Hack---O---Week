@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>WeatherX Dashboard</title>
+
+<link rel="stylesheet" href="weather.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<h1 class="title">WeatherX Dashboard</h1>
+
+<div class="weather-container">
+
+<div class="card">
+<i class="fas fa-sun icon"></i>
+<h2>Nagpur</h2>
+<p class="temp">32°C</p>
+<p>Sunny</p>
+</div>
+
+<div class="card">
+<i class="fas fa-cloud icon"></i>
+<h2>Delhi</h2>
+<p class="temp">27°C</p>
+<p>Cloudy</p>
+</div>
+
+<div class="card">
+<i class="fas fa-cloud-rain icon"></i>
+<h2>Mumbai</h2>
+<p class="temp">29°C</p>
+<p>Rainy</p>
+</div>
+
+</div>
+
+</body>
+</html>
