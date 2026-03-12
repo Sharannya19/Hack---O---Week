@@ -1,0 +1,282 @@
+WEEK 5:    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>WanderWithMe - Travel Blog</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    color:#333;
+
+    background:
+    linear-gradient(rgba(255,255,255,0.72), rgba(255,255,255,0.72)),
+    url("https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1600&q=80") center/cover fixed;
+}
+
+/* ================= HEADER SLIDESHOW ================= */
+
+/* ===== HEADER FIXED FULL WIDTH ===== */
+
+header{
+    position:relative;
+    height:500px;
+    width:100%;
+    overflow:hidden;
+}
+
+/* Slideshow */
+.slideshow{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
+/* Images */
+.slideshow img{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+    opacity:0;
+    transform:scale(1.2);
+    animation:fadeZoom 49s infinite;
+}
+
+/* 7 image delays */
+.slideshow img:nth-child(1){ animation-delay:0s; }
+.slideshow img:nth-child(2){ animation-delay:7s; }
+.slideshow img:nth-child(3){ animation-delay:14s; }
+.slideshow img:nth-child(4){ animation-delay:21s; }
+.slideshow img:nth-child(5){ animation-delay:28s; }
+.slideshow img:nth-child(6){ animation-delay:35s; }
+.slideshow img:nth-child(7){ animation-delay:42s; }
+
+/* Smooth fade + zoom */
+@keyframes fadeZoom{
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+    2% {
+        opacity: 1;
+    }
+
+    14% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    18% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+/* Dark overlay */
+.overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.45);
+    z-index:1;
+}
+
+/* Header text */
+.header-content{
+    position:relative;
+    z-index:2;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+header h1{
+    font-size:48px;
+    margin:0;
+}
+
+header p{
+    font-size:20px;
+}
+
+/* ================= NAVIGATION ================= */
+
+nav{
+    background:#0d3b66;
+    padding:15px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav a{
+    color:white;
+    margin:0 20px;
+    text-decoration:none;
+    font-size:18px;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+/* ================= SECTIONS ================= */
+
+section{
+    padding:60px 20px;
+    max-width:1000px;
+    margin:auto;
+}
+
+/* ================= STORY CARDS ================= */
+
+.story{
+    background:white;
+    margin-bottom:40px;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    transition:0.4s;
+    animation: floatCard 4s ease-in-out infinite;
+}
+
+@keyframes floatCard{
+    0%{ transform:translateY(0px); }
+    50%{ transform:translateY(-15px); }
+    100%{ transform:translateY(0px); }
+}
+
+.story:hover{
+    transform:translateY(-20px);
+    box-shadow:0 25px 45px rgba(0,0,0,0.25);
+}
+
+.story img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
+
+.story-content{
+    padding:25px;
+}
+
+.story h2{
+    margin-top:0;
+    color:#0d3b66;
+}
+
+footer{
+    background:#0d3b66;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+@media(max-width:700px){
+    header h1{font-size:32px;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+<div class="slideshow">
+    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80">
+
+    <img src="https://www.travelandleisure.com/thmb/ip03-TS_bwMVg8elPNZ8pKaEOO8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/mt-fuji-japan-MOSTBEAUTIFUL0921-413f7d67bb4f4539a336ebba14f74ed2.jpg">
+
+    <img src="https://www.travelandleisure.com/thmb/wsA6EXFuYkqtuJGLbQWw05-cwPs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/lake-como-MOSTBEAUTIFUL0921-cb08f3beff1041e4beefc67b5e956b23.jpg">
+
+    <img src="https://www.originaltravel.co.uk/img/v2/export/mag/Img_3413_0.jpg">
+
+    <img src="https://static.toiimg.com/thumb/msid-86480728,width-748,height-499,resizemode=4,imgsize-198188/.jpg">
+
+    <img src="https://w0.peakpx.com/wallpaper/1001/744/HD-wallpaper-maldives-beach-scenery-11.jpg">
+
+    <img src="https://media.istockphoto.com/id/655414358/photo/edinburgh-skyline-as-seen-from-calton-hill-scotland.jpg?s=612x612&w=0&k=20&c=aNCvOnK5Z_6S57jWboZUCrdeptM8GpHaARd3cqrQE9Q=">
+</div>
+
+<div class="overlay"></div>
+
+    <div class="header-content">
+        <h1>🌍 WanderWithMe</h1>
+        <p>Stories from my unforgettable journeys around the world</p>
+    </div>
+</header>
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav>
+<a href="#paris">Paris</a>
+<a href="#bali">Bali</a>
+<a href="#swiss">Switzerland</a>
+</nav>
+
+<!-- ================= STORIES ================= -->
+
+<section id="paris">
+<div class="story">
+<img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=80">
+<div class="story-content">
+<h2>✨ Spring in Paris</h2>
+<p>
+Walking along the Seine River with the Eiffel Tower glowing at sunset was magical.
+I explored charming cafés, visited the Louvre, and enjoyed fresh croissants every morning.
+</p>
+</div>
+</div>
+</section>
+
+<section id="bali">
+<div class="story">
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80">
+<div class="story-content">
+<h2>🌴 Tropical Escape in Bali</h2>
+<p>
+Bali welcomed me with peaceful beaches, stunning sunsets, and lush green rice terraces.
+</p>
+</div>
+</div>
+</section>
+
+<section id="swiss">
+<div class="story">
+<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80">
+<div class="story-content">
+<h2>🏔 Adventure in Switzerland</h2>
+<p>
+Snow-covered mountains and scenic alpine lakes made Switzerland unforgettable.
+</p>
+</div>
+</div>
+</section>
+
+<footer>
+© 2026 WanderWithMe | Travel. Explore. Discover.
+</footer>
+
+</body>
+</html>
